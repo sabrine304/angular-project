@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "$genre": {
+      "$in": [
+        "sport",
+        "RTS",
+        "puzzle"
+      ]
+    },
+    "$or": [
+      {
+        "$platforms": {
+          "$count": {
+            "$eq": 2
+          }
+        }
+      },
+      {
+        "$year": {
+          "$gt": 2000
+        }
+      }
+    ]
+  }
+}

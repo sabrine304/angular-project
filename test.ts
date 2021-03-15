@@ -27,7 +27,7 @@ const jasmineConfig = {
 };
 
 jasmineExecutor.loadConfig(jasmineConfig);
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 1;
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 
 if (keepAlive) {
   jasmineExecutor.onComplete(() => {
