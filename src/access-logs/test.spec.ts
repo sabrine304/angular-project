@@ -1,4 +1,4 @@
-import { Parser } from './access-logs/parser';
+import { Parser } from './parser';
 
 describe('parse', () => {
   it('should parse simple and return one log', () => {
