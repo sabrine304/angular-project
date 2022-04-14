@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  margin: 0;
+  padding: 8px 0;
+
+  &.collapsable {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      span i {
+        opacity: 1;
+      }
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 8px;
+
+      i {
+        display: block;
+        opacity: 0;
+        transition: transform 300ms, opacity 100ms;
+
+        &.opened {
+          transform: rotate(90deg);
+        }
+
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid;
+      }
+    }
+  }
+}
