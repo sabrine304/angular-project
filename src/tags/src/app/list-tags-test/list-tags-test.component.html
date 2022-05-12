@@ -1,0 +1,16 @@
+
+<span class="tagsTitle">{{tagsTitle}} </span>{{tagsMaster}}  <span class="tagsList" 
+      *ngFor="let tagItem of tagsList">{{tagItem}}</span>
+
+
+<div class="tags">
+ <input type="text" placeholder="Some tags:" name="tagsTitle" [(ngModel)]="tagsTitle">
+ <input type="text" placeholder="Master tag:" name="tagsMaster" [(ngModel)]="tagsMaster"> <br>
+
+
+<form #postForm="ngForm" (ngSubmit)="addTags()">
+<input type="text" placeholder="Tags" name="itemName" [(ngModel)]="tagsItem">
+<button type="submit">Add tag</button>
+<button type="button" (click)="deleteTags()">Remove last tag</button>
+</form>
+</div>
